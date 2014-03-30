@@ -1,3 +1,8 @@
+ohai 'reload_user' do
+  action :reload
+  plugin 'passwd'
+end
+
 if node[:ssh_keys]
   node[:ssh_keys].each do |node_user, bag_users|
     next unless node_user
